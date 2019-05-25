@@ -1,8 +1,5 @@
+# Ignore Gradle project-specific cache directory
+.gradle
 
-# Godot-specific ignores
-.import/
-export.cfg
-export_presets.cfg
-
-# Mono-specific ignores
-.mono/
+# Ignore Gradle build output directory
+build
