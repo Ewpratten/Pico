@@ -3,11 +3,16 @@ package PicoEngine;
 import hsa2.GraphicsConsole;
 import java.awt.Color;
 
+import PicoEngine.GridSystem;
+
 public class Window extends GraphicsConsole {
     static final long serialVersionUID = 0;
 
-    public Window(int width, int height, String name) {
+    GridSystem gridsys;
+
+    public Window(int width, int height, int gridW, int gridH, String name) {
         super(width, height, name);
+        gridsys = new GridSystem(height, width, gridH, gridW);
     }
 
     public int getWidth() {
@@ -28,5 +33,9 @@ public class Window extends GraphicsConsole {
         centre();
         this.setBackgroundColor(bg);
         this.clear();
+    }
+
+    public GridSystem getGrid(){
+        return gridsys;
     }
 }

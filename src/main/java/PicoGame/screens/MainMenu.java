@@ -15,22 +15,14 @@ import PicoEngine.ScreenManager;
 public class MainMenu implements Screen {
     Button start;
 
-    private final int buttonWidthRat = 7;
-    private final int buttonHeightRat = 10;
-
     private BufferedImage bgImageFile;
 
     private ScreenManager sm = ScreenManager.getInstance();
 
     public MainMenu(Window gc) {
-        // Get button positions
-        int section = (int)(gc.getHeight() / 6.5);
-        int loffset = (gc.getWidth() / 2) - (gc.getWidth() / buttonWidthRat);
-        int roffset = (gc.getWidth() / buttonWidthRat);
-        int height = gc.getHeight() / buttonHeightRat;
 
         // Create buttons
-        this.start = new Button(loffset, section * 4, roffset * 2, (int)(height*1.5));
+        this.start = new Button(gc.getGrid().getX(26), gc.getGrid().getY(26), gc.getGrid().getX(20), gc.getGrid().getY(5));
 
         // Load the bg image
         try {
@@ -60,7 +52,6 @@ public class MainMenu implements Screen {
 
             // Draw the backgorund image
             gc.drawImage(bgImageFile, 0, 0);
-            
         }
     }
 }

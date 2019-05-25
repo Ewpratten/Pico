@@ -8,7 +8,7 @@ import PicoEngine.ScreenManager;
 import PicoGame.screens.*;
 
 public class App {
-    static Window gc = new Window(1029, 560, "Pico");
+    static Window gc = new Window(1029, 560, 70, 38, "Pico");
     static ScreenManager sm = ScreenManager.getInstance();
 
     public static void main(String[] args) {
