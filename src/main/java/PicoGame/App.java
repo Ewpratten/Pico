@@ -8,7 +8,7 @@ import PicoEngine.ScreenManager;
 import PicoGame.screens.*;
 
 public class App {
-    static Window gc = new Window(1200, 800, "Pico");
+    static Window gc = new Window(1029, 560, "Pico");
     static ScreenManager sm = ScreenManager.getInstance();
 
     public static void main(String[] args) {
@@ -29,6 +29,7 @@ public class App {
 
         // Register all screens
         sm.register("Main Menu", new MainMenu(gc));
+        sm.register("Player Select", new PlayerSelect());
 
         // Load starting screen
         sm.setScreen("Main Menu");

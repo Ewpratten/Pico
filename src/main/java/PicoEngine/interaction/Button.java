@@ -13,8 +13,14 @@ public class Button extends Rectangle {
         super(x, y, w, h);
     }
 
-    public boolean wasPressed(Point loc) {
-        return this.contains(loc);
+    public boolean isHovering(Point loc) {
+        // Make sure program dosent crash on unfocus
+        try {
+            return this.contains(loc);
+        } catch (Exception e) {
+            return false;
+        }
+        
     }
 
     public boolean wasPressed(Point loc, int mouseInput) {
