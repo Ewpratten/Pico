@@ -41,7 +41,7 @@ public class MainMenu implements Screen {
 
         // If start button clicked, move to player select
         if (start.wasPressed(loc, mouseInput)) {
-            sm.setScreen("Player Select");
+            sm.setScreen("Game");
         }
     }
     

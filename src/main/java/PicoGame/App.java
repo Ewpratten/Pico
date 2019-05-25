@@ -30,6 +30,7 @@ public class App {
         // Register all screens
         sm.register("Main Menu", new MainMenu(gc));
         sm.register("Player Select", new PlayerSelect());
+        sm.register("Game", new Game(gc));
 
         // Load starting screen
         sm.setScreen("Main Menu");
